@@ -13,7 +13,7 @@ class EmployeeDAO:
         self.__connection.commit()
         return self.__cursor.lastrowid
     
-    def get_by_id(self, id):
+    def get_by_id(self, id: int):
         sql = '''SELECT * FROM employee WHERE id = ?'''
         self.__cursor.execute(sql, (id,))
         row = self.__cursor.fetchone()
@@ -37,7 +37,7 @@ class EmployeeDAO:
 
         return self.__cursor.rowcount
     
-    def delete(self, id):
+    def delete(self, id: int):
         sql = '''DELETE FROM employee WHERE id = ?'''
         self.__cursor.execute(sql, (id,))
 
