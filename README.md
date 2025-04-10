@@ -10,6 +10,29 @@ This repository is a Python-based project that demonstrates Object-Oriented Prog
 - [main.py](main.py) - the file that is used for testing.
 - [imgs](imgs) - the directory that contains screenshots of tests.
 
+## `Employee` class
+The class that is used to create employee objects. It has getters and setters for each attribute used.
+
+### Attributes
+- `id`: Employee identificator.
+- `name`: Employee's name.
+- `position`: The position that employee has.
+- `salary`: Salary of the employee.
+- `hire_date`: The data when the employee was hired.
+
+## `EmployeeDAO` class
+Class that is responisble with operation with the database.
+
+### Attributes
+- `database`: Path to database.
+
+### Methods
+- `insert(employee: Employee)`: Adds a new employee into database.
+- `get_by_id(id: int)`: Returns all data about employee with id given.
+- `get_all()`: Returns all employees' data.
+- `update(employee: Employee)`: Rewrites the employee data.
+- `delete(id: int)`: Deletes employee by id.
+
 ## Test input/output
 ### 1. Inserting a new employee
 #### Initially the database looks like this:
@@ -54,3 +77,17 @@ This repository is a Python-based project that demonstrates Object-Oriented Prog
 ```
 
 ![screenshot](imgs/a_delete.PNG)
+
+## Installation and Usage
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/kd0nwww/employee_database.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd employee_database
+    ```
+3. Run the script:
+    ```bash
+    python main.py
+    ```
